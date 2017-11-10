@@ -17,4 +17,5 @@ void loop()
   potVal = analogRead(potPin);    // read the input pin
   buzzerPitch = map(potVal, 0, 1023, 0, 255); // Map the analogue range (0-1023) to the pwm range (0-255)
   analogWrite(buzzerPin, buzzerPitch); //very the pitch of the buzzer depending on the position of the Potentiometer
+  delay(100);
 }
