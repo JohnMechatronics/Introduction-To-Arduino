@@ -37,9 +37,9 @@ void loop() {
   // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (buttonState == HIGH) {
     // make the buzzer beep:
-    analogWrite(9, 150);     
+    analogWrite(buzzerPin, 150);     
   } else {
     // turn off the buzzer
-    analogWrite(9, 0);       // 0 turns it off
+    analogWrite(buzzerPin, 0);       // 0 turns it off
   }
 }
