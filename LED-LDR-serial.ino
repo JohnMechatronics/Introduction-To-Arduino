@@ -18,19 +18,15 @@ void loop() {
   photocellVal = analogRead(photocellPin);  // read the input from the LDR
   ledBrightness = map(photocellVal, 0, 1023, 255, 0); // Map the analogue range (0-1023) to the pwm range (0-255)
 
-  Serial.print( "Original Value = “);
+  Serial.print( "Original Value =");
   Serial.println(photocellVal); 
-  Serial.print("Mapped Value = ”);
-  Serial.println(buzzerPitch);
+  Serial.print("Mapped Value =");
+  Serial.println(ledBrightness);
 
   if (ledBrightness > 120) { //create a threashold to switch light on
     analogWrite(ledPin, ledBrightness); //very the pitch of the buzzer depending on the light falling on the LDR (Photocell)
   } else {
     analogWrite(ledPin, 0);
   }
-
-
-
-
 
 }
